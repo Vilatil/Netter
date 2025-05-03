@@ -22,6 +22,6 @@ else
     echo "Sourcing the env file under $HOME./cargo/ directory"
     user_shell=$(awk -F: -v user="$USER" '$1 == user {print $NF}' /etc/passwd)
     [[ user_shell == "nushell" ]] && source "$HOME/.cargo/env.nu" && exit 0
-    [[ user_shell == "fish" ]] && source "$HOME/.cargo/env.fish && exit 0
+    [[ user_shell == "fish" ]] && source "$HOME/.cargo/env.fish" && exit 0
     source "$HOME/.cargo/env" && exit 0
 fi
